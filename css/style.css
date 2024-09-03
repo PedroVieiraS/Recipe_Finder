@@ -1,102 +1,142 @@
-  .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #333333;
+  padding: 20px;
+}
 
-    border-radius: 15px;
+.title {
+  color: #ffffff;
+  font-size: 32px;
+  margin: 20px;
+}
 
-    background-color: #333333;
-  }
+.form-body {
+  margin: 40px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+}
 
-  .title {
-    color: #ffffff;
-    font-size: 32px;
-    margin: 20px;
-  }
+.form-body input,
+.form-body button {
+  height: 70px;
+  transition: all 0.3s ease; 
+}
 
+.form-body input {
+  flex: 1;
+  padding: 0 24px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid transparent;
+  transition: border ease-in 0.2s;
+}
+
+.form-body input::placeholder {
+  color: #a8a8b3;
+}
+
+.form-body input:focus {
+  border: 1px solid #c9c9d4;
+  outline: none; 
+}
+
+.form-body button {
+  width: 100%;
+  max-width: 210px;
+  border-radius: 0 4px 4px 0;
+  background-color: #dceb14;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-body button:hover {
+  filter: brightness(0.75);
+  transition: filter 0.3s ease; 
+}
+
+.results {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-item {
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  background-color: #efebe9;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.recipe-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.45); 
+}
+
+.recipe-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.recipe-item a {
+  color: maroon;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.recipe-item a:hover {
+  color: #ff6347; 
+}
+
+.recipe-item a:focus {
+  outline: 2px solid #ff6347; 
+  outline-offset: 4px;
+}
+
+#recipe-details {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 60vw;
+  background-color: #333333;
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 600px) {
   .form-body {
-    margin: 40px;
-    max-width: 700px;
-    width: 100%;
-  
-    display: flex;
+      flex-direction: column;
+      margin: 20px;
   }
-  
+
   .form-body input,
   .form-body button {
-    height: 70px;
+      width: 100%;
+      height: 60px;
+      border-radius: 4px;
+      margin-bottom: 10px;
   }
-  
-  .form-body input {
-    flex: 1;
-    padding: 0 24px;
-  
-    border-radius: 4px 0 0 4px;
-    border: 1px solid transparent;
-    transition: border ease-in 0.2s;
-  }
-  
-  .form-body input::placeholder {
-    color: #a8a8b3;
-  }
-  
-  .form-body input:focus {
-    border: 1px solid #c9c9d4;
-  }
-  
-  .form-body button {
-    width: 100%;
-    max-width: 210px;
-    border-radius: 0 4px 4px 0;
-    background-color: #dceb14;
-    color: #000000;
-  
-    font-weight: bold;
-  }
-  
-  .form-body button:hover {
-    filter: brightness(0.75);
-  }
-
-
-
 
   .results {
-    display: flex;
-    width: 100%;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap:20px;
-    padding: 20px;
+      justify-content: center; 
   }
 
-  .recipe-item{
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: #333333;
-    background-color: #efebe9;
-    border-radius: 5px;
-    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.35);
+  .recipe-item {
+      width: 100%;
+      max-width: 300px; 
   }
-  .recipe-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  .recipe-item a {
-    color:maroon;
-    text-decoration: none;
-  }
-  
-  #recipe-details {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    border-radius: 10px;
-    margin-top: 20px;
-    width: 60vw;
-    background-color: #333333;
-  }
+}
