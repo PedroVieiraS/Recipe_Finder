@@ -22,23 +22,23 @@ form.addEventListener('submit', (event) => {
     )
 
 
-    function displayResults(recipe) {
+    function displayResults(recipes) {
         const results = document.querySelector('.results')
 
         query.value = ""
 
         results.innerHTML = ''
 
-        recipe.forEach(repo => {
+        recipes.forEach(recipe => {
             const recipeItem = document.createElement('div');
             recipeItem.className = 'recipe-item';
             
             const recipeTitle = document.createElement('h3');
-            recipeTitle.textContent = repo.title;
+            recipeTitle.textContent = recipe.title;
 
             const recipeImage = document.createElement('img');
-            recipeImage.src = repo.image;
-            recipeImage.alt = repo.title;
+            recipeImage.src = recipe.image;
+            recipeImage.alt = recipe.title;
 
             const recipeLink = document.createElement('a');
             recipeLink.href = "/receitas.html"
