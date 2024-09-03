@@ -1,0 +1,30 @@
+header {
+    width: 100%;
+    
+    background-color: #1c1761d3;;
+    padding: 10px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-list, a{
+    color: white;
+}
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
