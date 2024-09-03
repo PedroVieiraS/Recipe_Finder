@@ -5,6 +5,14 @@
     box-sizing: border-box;
     list-style: none;
   }
+
+  :root {
+    --verde-lima: #A8D080;
+    --laranja-suave: #FFA726;
+    --amarelo-palido: #FFF59D;
+    --branco-creme: #FFF3E0;
+    --cinza-carvao: #37474F;
+}
   
   body {
     background-color: #ccc;
