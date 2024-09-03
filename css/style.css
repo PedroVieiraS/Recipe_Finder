@@ -223,3 +223,10 @@
     width: 60vw;
     background-color: #333333;
   }
+  .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:;
+    
+  }
