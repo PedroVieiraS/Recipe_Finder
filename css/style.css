@@ -1,3 +1,10 @@
+  /* INICIO DO HEADER */
+
+  
+  
+  
+  
+  /* INICIO DA MAIN */
   .content{
     display: flex;
     flex-direction: column;
@@ -59,9 +66,6 @@
     filter: brightness(0.75);
   }
 
-
-
-
   .results {
     display: flex;
     width: 100%;
@@ -100,3 +104,8 @@
     width: 60vw;
     background-color: #333333;
   }
+
+  .ph-star{
+    color: yellow;
+    font-size: 2rem;
+    }
